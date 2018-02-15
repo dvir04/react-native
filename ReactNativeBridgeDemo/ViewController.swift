@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         
         reactView = ReactModule.sharedInstance.viewForModule("StateApp", initialProperties: nil)
         reactNativeView.addSubview(reactView!)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.toggleState), name: .stateChangedNotification, object: nil)
     }
 
     override func viewDidLayoutSubviews() {
@@ -33,7 +35,17 @@ class ViewController: UIViewController {
 
 
     @IBAction func nativeSwitchValueChanged(_ sender: UISwitch) {
-        
+        UserDefaults.standard.set(sender.isOn, forKey: "State")
+    }
+    
+    @objc func toggleState(_ notification: Notification) {
+        let currentState = UserDefaults.standard.bool(forKey: "State")
+        print("State: \(currentState)")
+        nativeSwitch.isOn = !currentState
+        UserDefaults.standard.set(!currentState, forKey: "State")
     }
 }
 
+extension Notification.Name {
+    static let stateChangedNotification = Notification.Name(rawValue: "StateChanged")
+}

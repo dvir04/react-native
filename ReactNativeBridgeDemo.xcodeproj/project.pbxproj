@@ -17,6 +17,8 @@
 		C3477F702035634100AD6A71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3477F6E2035634100AD6A71 /* LaunchScreen.storyboard */; };
 		C3477F7B2035634200AD6A71 /* ReactNativeBridgeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3477F7A2035634200AD6A71 /* ReactNativeBridgeDemoTests.swift */; };
 		C3477F862035634200AD6A71 /* ReactNativeBridgeDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3477F852035634200AD6A71 /* ReactNativeBridgeDemoUITests.swift */; };
+		C37BFAC420356EFF00CEFB8A /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BFAC320356EFF00CEFB8A /* StateManager.swift */; };
+		C37BFAC620356F3A00CEFB8A /* StateManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C37BFAC520356F3A00CEFB8A /* StateManagerBridge.m */; };
 		C3842516203565DB00F95BE6 /* ReactModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3842515203565DA00F95BE6 /* ReactModule.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		C3477F812035634200AD6A71 /* ReactNativeBridgeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeBridgeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3477F852035634200AD6A71 /* ReactNativeBridgeDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeBridgeDemoUITests.swift; sourceTree = "<group>"; };
 		C3477F872035634200AD6A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37BFAC320356EFF00CEFB8A /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		C37BFAC520356F3A00CEFB8A /* StateManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateManagerBridge.m; sourceTree = "<group>"; };
 		C3842515203565DA00F95BE6 /* ReactModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactModule.swift; sourceTree = "<group>"; };
 		E0F4B074B78E970389CFE3A4 /* Pods-ReactNativeBridgeDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBridgeDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeBridgeDemoUITests/Pods-ReactNativeBridgeDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC0D57FAC1AEA86D3659106D /* Pods_ReactNativeBridgeDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeBridgeDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +133,8 @@
 				C3477F652035634100AD6A71 /* AppDelegate.swift */,
 				C3477F672035634100AD6A71 /* ViewController.swift */,
 				C3842515203565DA00F95BE6 /* ReactModule.swift */,
+				C37BFAC320356EFF00CEFB8A /* StateManager.swift */,
+				C37BFAC520356F3A00CEFB8A /* StateManagerBridge.m */,
 				C3477F692035634100AD6A71 /* Main.storyboard */,
 				C3477F6C2035634100AD6A71 /* Assets.xcassets */,
 				C3477F6E2035634100AD6A71 /* LaunchScreen.storyboard */,
@@ -245,6 +251,7 @@
 				TargetAttributes = {
 					C3477F612035634100AD6A71 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					C3477F752035634100AD6A71 = {
@@ -461,7 +468,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37BFAC620356F3A00CEFB8A /* StateManagerBridge.m in Sources */,
 				C3477F682035634100AD6A71 /* ViewController.swift in Sources */,
+				C37BFAC420356EFF00CEFB8A /* StateManager.swift in Sources */,
 				C3842516203565DB00F95BE6 /* ReactModule.swift in Sources */,
 				C3477F662035634100AD6A71 /* AppDelegate.swift in Sources */,
 			);
@@ -630,11 +639,13 @@
 			baseConfigurationReference = 50C2197DCCB92A0416BF2F8A /* Pods-ReactNativeBridgeDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ReactNativeBridgeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citigroup.inview.ReactNativeBridgeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,6 +656,7 @@
 			baseConfigurationReference = 209A89EAC8FC63DF31D4CB3B /* Pods-ReactNativeBridgeDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ReactNativeBridgeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
