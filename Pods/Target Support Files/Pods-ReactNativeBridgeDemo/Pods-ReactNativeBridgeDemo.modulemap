@@ -1,0 +1,6 @@
+framework module Pods_ReactNativeBridgeDemo {
+  umbrella header "Pods-ReactNativeBridgeDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

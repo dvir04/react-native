@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		286DB1E803F84CC65F677FE3 /* Pods_ReactNativeBridgeDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0D57FAC1AEA86D3659106D /* Pods_ReactNativeBridgeDemoTests.framework */; };
+		626FB56EF428AA4E7DF88A28 /* Pods_ReactNativeBridgeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D56A0E078837D2BC7CFCA8 /* Pods_ReactNativeBridgeDemo.framework */; };
+		9D2B9A1BBE87EB9AAD601315 /* Pods_ReactNativeBridgeDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376E07C9CDEA6BDDBF7A3C4F /* Pods_ReactNativeBridgeDemoUITests.framework */; };
 		C3477F662035634100AD6A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3477F652035634100AD6A71 /* AppDelegate.swift */; };
 		C3477F682035634100AD6A71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3477F672035634100AD6A71 /* ViewController.swift */; };
 		C3477F6B2035634100AD6A71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3477F692035634100AD6A71 /* Main.storyboard */; };
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0924B4ECA13DFD28815D952C /* Pods-ReactNativeBridgeDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBridgeDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeBridgeDemoTests/Pods-ReactNativeBridgeDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		12520D050EFB07FF5F93EBB9 /* Pods-ReactNativeBridgeDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBridgeDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeBridgeDemoUITests/Pods-ReactNativeBridgeDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		209A89EAC8FC63DF31D4CB3B /* Pods-ReactNativeBridgeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBridgeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeBridgeDemo/Pods-ReactNativeBridgeDemo.release.xcconfig"; sourceTree = "<group>"; };
+		376E07C9CDEA6BDDBF7A3C4F /* Pods_ReactNativeBridgeDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeBridgeDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C2197DCCB92A0416BF2F8A /* Pods-ReactNativeBridgeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBridgeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeBridgeDemo/Pods-ReactNativeBridgeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		51D56A0E078837D2BC7CFCA8 /* Pods_ReactNativeBridgeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeBridgeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C4111A39503CC425F6C9EC /* Pods-ReactNativeBridgeDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBridgeDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeBridgeDemoTests/Pods-ReactNativeBridgeDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		C3477F622035634100AD6A71 /* ReactNativeBridgeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeBridgeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3477F652035634100AD6A71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3477F672035634100AD6A71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		C3477F812035634200AD6A71 /* ReactNativeBridgeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeBridgeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3477F852035634200AD6A71 /* ReactNativeBridgeDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeBridgeDemoUITests.swift; sourceTree = "<group>"; };
 		C3477F872035634200AD6A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0F4B074B78E970389CFE3A4 /* Pods-ReactNativeBridgeDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBridgeDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeBridgeDemoUITests/Pods-ReactNativeBridgeDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EC0D57FAC1AEA86D3659106D /* Pods_ReactNativeBridgeDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeBridgeDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626FB56EF428AA4E7DF88A28 /* Pods_ReactNativeBridgeDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286DB1E803F84CC65F677FE3 /* Pods_ReactNativeBridgeDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2B9A1BBE87EB9AAD601315 /* Pods_ReactNativeBridgeDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DD89C0E30A9527D632AC407 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51D56A0E078837D2BC7CFCA8 /* Pods_ReactNativeBridgeDemo.framework */,
+				EC0D57FAC1AEA86D3659106D /* Pods_ReactNativeBridgeDemoTests.framework */,
+				376E07C9CDEA6BDDBF7A3C4F /* Pods_ReactNativeBridgeDemoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C3477F592035634100AD6A71 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				C3477F792035634100AD6A71 /* ReactNativeBridgeDemoTests */,
 				C3477F842035634200AD6A71 /* ReactNativeBridgeDemoUITests */,
 				C3477F632035634100AD6A71 /* Products */,
+				D10022D03E0A84B42790128C /* Pods */,
+				4DD89C0E30A9527D632AC407 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,19 @@
 			path = ReactNativeBridgeDemoUITests;
 			sourceTree = "<group>";
 		};
+		D10022D03E0A84B42790128C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50C2197DCCB92A0416BF2F8A /* Pods-ReactNativeBridgeDemo.debug.xcconfig */,
+				209A89EAC8FC63DF31D4CB3B /* Pods-ReactNativeBridgeDemo.release.xcconfig */,
+				0924B4ECA13DFD28815D952C /* Pods-ReactNativeBridgeDemoTests.debug.xcconfig */,
+				76C4111A39503CC425F6C9EC /* Pods-ReactNativeBridgeDemoTests.release.xcconfig */,
+				12520D050EFB07FF5F93EBB9 /* Pods-ReactNativeBridgeDemoUITests.debug.xcconfig */,
+				E0F4B074B78E970389CFE3A4 /* Pods-ReactNativeBridgeDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3477F8A2035634200AD6A71 /* Build configuration list for PBXNativeTarget "ReactNativeBridgeDemo" */;
 			buildPhases = (
+				9C26545AAB9B4AEC785008F5 /* [CP] Check Pods Manifest.lock */,
 				C3477F5E2035634100AD6A71 /* Sources */,
 				C3477F5F2035634100AD6A71 /* Frameworks */,
 				C3477F602035634100AD6A71 /* Resources */,
+				45452238C69983E2946D6B01 /* [CP] Embed Pods Frameworks */,
+				143454A46C637F8C5902C144 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3477F8D2035634200AD6A71 /* Build configuration list for PBXNativeTarget "ReactNativeBridgeDemoTests" */;
 			buildPhases = (
+				732E2E071391EF627F714389 /* [CP] Check Pods Manifest.lock */,
 				C3477F722035634100AD6A71 /* Sources */,
 				C3477F732035634100AD6A71 /* Frameworks */,
 				C3477F742035634100AD6A71 /* Resources */,
+				7C2AB4795A0B0549F0212532 /* [CP] Embed Pods Frameworks */,
+				3322669CB57F2C4279D9D694 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3477F902035634200AD6A71 /* Build configuration list for PBXNativeTarget "ReactNativeBridgeDemoUITests" */;
 			buildPhases = (
+				31EDD6BFCEAD75AF91B07C4A /* [CP] Check Pods Manifest.lock */,
 				C3477F7D2035634200AD6A71 /* Sources */,
 				C3477F7E2035634200AD6A71 /* Frameworks */,
 				C3477F7F2035634200AD6A71 /* Resources */,
+				D91F4213498E440215A96C6C /* [CP] Embed Pods Frameworks */,
+				B5BE8CC9A16B3DE11582A24D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		143454A46C637F8C5902C144 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeBridgeDemo/Pods-ReactNativeBridgeDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31EDD6BFCEAD75AF91B07C4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactNativeBridgeDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3322669CB57F2C4279D9D694 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeBridgeDemoTests/Pods-ReactNativeBridgeDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45452238C69983E2946D6B01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeBridgeDemo/Pods-ReactNativeBridgeDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeBridgeDemo/Pods-ReactNativeBridgeDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		732E2E071391EF627F714389 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactNativeBridgeDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C2AB4795A0B0549F0212532 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeBridgeDemoTests/Pods-ReactNativeBridgeDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C26545AAB9B4AEC785008F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactNativeBridgeDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5BE8CC9A16B3DE11582A24D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeBridgeDemoUITests/Pods-ReactNativeBridgeDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D91F4213498E440215A96C6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeBridgeDemoUITests/Pods-ReactNativeBridgeDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3477F5E2035634100AD6A71 /* Sources */ = {
@@ -424,6 +623,7 @@
 		};
 		C3477F8B2035634200AD6A71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C2197DCCB92A0416BF2F8A /* Pods-ReactNativeBridgeDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +638,7 @@
 		};
 		C3477F8C2035634200AD6A71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 209A89EAC8FC63DF31D4CB3B /* Pods-ReactNativeBridgeDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +653,7 @@
 		};
 		C3477F8E2035634200AD6A71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0924B4ECA13DFD28815D952C /* Pods-ReactNativeBridgeDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +670,7 @@
 		};
 		C3477F8F2035634200AD6A71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C4111A39503CC425F6C9EC /* Pods-ReactNativeBridgeDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +687,7 @@
 		};
 		C3477F912035634200AD6A71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12520D050EFB07FF5F93EBB9 /* Pods-ReactNativeBridgeDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +703,7 @@
 		};
 		C3477F922035634200AD6A71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0F4B074B78E970389CFE3A4 /* Pods-ReactNativeBridgeDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
