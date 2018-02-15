@@ -10,14 +10,19 @@ import Foundation
 import React
 
 @objc(StateManager)
-class StateManager: NSObject {
+class StateManager: RCTEventEmitter {
     
-    var bridge: RCTBridge!
+    override func supportedEvents() -> [String]! {
+        return ["StateManagerEvent"]
+    }
     
-    
-    @objc func didPressButton(_ reactTag: NSNumber) {
+    @objc func stateValueChanged(_ state: Bool) {
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: .stateChangedNotification, object: true)
+            NotificationCenter.default.post(name: .reactNativeStateChangedNotification, object: state)
         }
+    }
+    
+    static func broadcastStateChangedEvent(state: Bool) {
+        ReactModule.sharedInstance.eventEmitter(forName: "StateManager")?.sendEvent(withName: "StateManagerEvent", body: ["state": state])
     }
 }

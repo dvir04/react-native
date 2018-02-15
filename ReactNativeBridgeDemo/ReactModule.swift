@@ -14,22 +14,34 @@ class ReactModule: NSObject {
     
     var bridge: RCTBridge?
     
-    private func createBridgeIfNeeded() -> RCTBridge {
+    func viewForModule(_ moduleName: String, initialProperties: [String : Any]?) -> RCTRootView {
+        let viewBridge = createBridgeIfNeeded()
+        let rootView: RCTRootView = RCTRootView(bridge: viewBridge, moduleName: moduleName, initialProperties: initialProperties)
+        return rootView
+    }
+    
+    func eventEmitter(forName moduleName: String) -> RCTEventEmitter? {
+        return module(forName: moduleName) as? RCTEventEmitter
+    }
+}
+
+extension ReactModule: RCTBridgeDelegate {
+    func sourceURL(for bridge: RCTBridge!) -> URL! {
+        return RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index.ios", fallbackResource: nil) // http://localhost:8081/index.ios.bundle?platform=ios
+    }
+}
+
+private extension ReactModule {
+    
+    func createBridgeIfNeeded() -> RCTBridge {
         if bridge == nil {
             bridge = RCTBridge.init(delegate: self, launchOptions: nil)
         }
         return bridge!
     }
     
-    func viewForModule(_ moduleName: String, initialProperties: [String : Any]?) -> RCTRootView {
-        let viewBridge = createBridgeIfNeeded()
-        let rootView: RCTRootView = RCTRootView(bridge: viewBridge, moduleName: moduleName, initialProperties: initialProperties)
-        return rootView
-    }
-}
-
-extension ReactModule: RCTBridgeDelegate {
-    func sourceURL(for bridge: RCTBridge!) -> URL! {
-        return URL(string: "http://localhost:8081/index.ios.bundle?platform=ios")
+    func module(forName moduleName: String) -> Any {
+        let bridge = createBridgeIfNeeded()
+        return bridge.module(forName: moduleName)
     }
 }

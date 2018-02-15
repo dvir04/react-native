@@ -5,8 +5,9 @@ import ReactNative, {
   StyleSheet,
   Text,
   View,
+  Switch,
   NativeModules,
-  TouchableOpacity
+  NativeEventEmitter
 } from 'react-native';
 
 const { StateManager } = NativeModules;
@@ -22,15 +23,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'white',
   },
-  button: {
-    backgroundColor: '#ff8000',
-    borderRadius: 4,
-    padding:10
-  },
-  buttonText : {
-    color : '#fff',
-    textAlign:'center',
-    fontWeight: 'bold'
+  switch: {
+    top: 40
   },
 });
 
@@ -38,31 +32,45 @@ class StateApp extends React.Component {
 
   constructor(props) {
     super(props);
+    this._subscription = null;
     this.state = {
-      buttonText: 'First Example'
+      value: props.state
     }
   }
 
-  buttonClick = () => {
-        // NativeModules.ViewController.setState(this.state.switchState, (state) => {
-        //     this.setState({state});
-        // });
-        StateManager.didPressButton(this.props.rootTag);
-      }
+  componentDidMount() {
+    const StateManagerEvent = new NativeEventEmitter(StateManager);
+    this._subscription = StateManagerEvent.addListener('StateManagerEvent', (info) => {
+      console.log(info.state);
+      this.setState({
+        value: info.state
+      })
+    }
+    );
+  }
 
-      render() {
-        return (
-          <View style={styles.container}>
-          <Text style={styles.welcome}>React Native View</Text>
-          <TouchableOpacity>
-          <View style={styles.button}>
-          <Text style={styles.buttonText}
-          onPress={() => { this.buttonClick()}}>{this.state.buttonText}</Text>
-          </View>
-          </TouchableOpacity>
-          </View>
-          )
-        }
-      }
+  componentWillUnmount() {
+    this._subscription.remove();
+  }
 
-      module.exports = StateApp;
+  stateValueChanged = (value) => {
+    StateManager.stateValueChanged(value);
+    this.setState({
+      value: value
+    })
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+      <Text style={styles.welcome}>React Native View</Text>
+      <Switch style={styles.switch}
+      value={ this.state.value }
+      onValueChange={(value) => this.stateValueChanged(value)}
+      />
+      </View>
+      )
+    }
+  }
+
+  module.exports = StateApp;

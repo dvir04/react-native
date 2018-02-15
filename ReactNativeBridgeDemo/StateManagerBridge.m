@@ -7,9 +7,11 @@
 //
 
 #import "RCTBridgeModule.h"
+#import <React/RCTEventEmitter.h>
 
-@interface RCT_EXTERN_MODULE(StateManager, NSObject)
 
-RCT_EXTERN_METHOD(didPressButton:(nonnull NSNumber *)reactTag)
+@interface RCT_EXTERN_MODULE(StateManager, RCTEventEmitter)
+
+RCT_EXTERN_METHOD(stateValueChanged:(nonnull BOOL)state)
 
 @end

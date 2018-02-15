@@ -21,10 +21,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        reactView = ReactModule.sharedInstance.viewForModule("StateApp", initialProperties: nil)
+        let currentState = UserDefaults.standard.bool(forKey: "State")
+        
+        nativeSwitch.setOn(currentState, animated: false)
+        
+        reactView = ReactModule.sharedInstance.viewForModule("StateApp", initialProperties: ["state": currentState])
         reactNativeView.addSubview(reactView!)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.toggleState), name: .stateChangedNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.toggleState), name: .reactNativeStateChangedNotification, object: nil)
     }
 
     override func viewDidLayoutSubviews() {
@@ -32,20 +36,20 @@ class ViewController: UIViewController {
         
         reactView?.frame = reactNativeView.bounds
     }
-
-
+    
     @IBAction func nativeSwitchValueChanged(_ sender: UISwitch) {
         UserDefaults.standard.set(sender.isOn, forKey: "State")
+        StateManager.broadcastStateChangedEvent(state: sender.isOn)
     }
     
     @objc func toggleState(_ notification: Notification) {
-        let currentState = UserDefaults.standard.bool(forKey: "State")
-        print("State: \(currentState)")
-        nativeSwitch.isOn = !currentState
-        UserDefaults.standard.set(!currentState, forKey: "State")
+        if let currentState = notification.object as? Bool {
+            nativeSwitch.setOn(currentState, animated: true)
+            nativeSwitchValueChanged(nativeSwitch)
+        }
     }
 }
 
 extension Notification.Name {
-    static let stateChangedNotification = Notification.Name(rawValue: "StateChanged")
+    static let reactNativeStateChangedNotification = Notification.Name(rawValue: "reactNativeStateChangedNotification")
 }
