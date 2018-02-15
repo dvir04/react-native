@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import React
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nativeView: UIView!
+    @IBOutlet weak var nativeSwitch: UISwitch!
+    @IBOutlet weak var reactNativeView: RCTRootView!
+    
+    var reactView: RCTRootView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        reactView = ReactModule.sharedInstance.viewForModule("StateApp", initialProperties: nil)
+        reactNativeView.addSubview(reactView!)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        reactView?.frame = reactNativeView.bounds
     }
 
 
+    @IBAction func nativeSwitchValueChanged(_ sender: UISwitch) {
+        
+    }
 }
 

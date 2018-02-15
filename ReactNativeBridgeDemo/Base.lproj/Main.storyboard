@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gsE-B4-FFB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="8Vd-O0-bHx">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="gsE-B4-FFB" customClass="ViewController" customModule="ReactNativeBridgeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I1m-k0-aBz"/>
+                        <viewControllerLayoutGuide type="bottom" id="7tR-MI-hCK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dk7-p3-hND">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IX-cE-P9Q">
+                                <rect key="frame" x="0.0" y="20" width="375" height="323.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZt-Zm-nGF">
+                                        <rect key="frame" x="137" y="83" width="100.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GTW-Om-cEW">
+                                        <rect key="frame" x="163" y="146" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="nativeSwitchValueChanged:" destination="gsE-B4-FFB" eventType="valueChanged" id="Nnc-z7-ur5"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="OZt-Zm-nGF" firstAttribute="centerX" secondItem="0IX-cE-P9Q" secondAttribute="centerX" id="CsV-XL-2pP"/>
+                                    <constraint firstItem="GTW-Om-cEW" firstAttribute="centerX" secondItem="0IX-cE-P9Q" secondAttribute="centerX" id="S8Q-kv-TNf"/>
+                                    <constraint firstItem="GTW-Om-cEW" firstAttribute="centerY" secondItem="0IX-cE-P9Q" secondAttribute="centerY" id="h7e-tK-dJu"/>
+                                    <constraint firstItem="GTW-Om-cEW" firstAttribute="top" secondItem="OZt-Zm-nGF" secondAttribute="bottom" constant="40" id="mIw-3x-DBL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGz-sb-Ap4">
+                                <rect key="frame" x="0.0" y="343.5" width="375" height="323.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0IX-cE-P9Q" firstAttribute="top" secondItem="I1m-k0-aBz" secondAttribute="bottom" id="8yM-GW-TNX"/>
+                            <constraint firstItem="nGz-sb-Ap4" firstAttribute="height" secondItem="0IX-cE-P9Q" secondAttribute="height" id="Dpb-Yg-7Mo"/>
+                            <constraint firstItem="7tR-MI-hCK" firstAttribute="top" secondItem="nGz-sb-Ap4" secondAttribute="bottom" id="HOe-BR-Oxt"/>
+                            <constraint firstAttribute="trailing" secondItem="0IX-cE-P9Q" secondAttribute="trailing" id="UGb-8Z-BhQ"/>
+                            <constraint firstItem="nGz-sb-Ap4" firstAttribute="top" secondItem="0IX-cE-P9Q" secondAttribute="bottom" id="bua-BO-Mjw"/>
+                            <constraint firstAttribute="trailing" secondItem="nGz-sb-Ap4" secondAttribute="trailing" id="eGI-3d-a8q"/>
+                            <constraint firstItem="nGz-sb-Ap4" firstAttribute="leading" secondItem="dk7-p3-hND" secondAttribute="leading" id="ecY-gd-xFn"/>
+                            <constraint firstItem="0IX-cE-P9Q" firstAttribute="leading" secondItem="dk7-p3-hND" secondAttribute="leading" id="oCe-3g-Qi8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nativeSwitch" destination="GTW-Om-cEW" id="6bk-0u-BJV"/>
+                        <outlet property="nativeView" destination="0IX-cE-P9Q" id="8mZ-Uq-EnF"/>
+                        <outlet property="reactNativeView" destination="nGz-sb-Ap4" id="gOA-QX-Hdb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7m-Ub-Cj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="465" y="-203"/>
         </scene>
     </scenes>
 </document>

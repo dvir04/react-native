@@ -17,6 +17,7 @@
 		C3477F702035634100AD6A71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3477F6E2035634100AD6A71 /* LaunchScreen.storyboard */; };
 		C3477F7B2035634200AD6A71 /* ReactNativeBridgeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3477F7A2035634200AD6A71 /* ReactNativeBridgeDemoTests.swift */; };
 		C3477F862035634200AD6A71 /* ReactNativeBridgeDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3477F852035634200AD6A71 /* ReactNativeBridgeDemoUITests.swift */; };
+		C3842516203565DB00F95BE6 /* ReactModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3842515203565DA00F95BE6 /* ReactModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C3477F812035634200AD6A71 /* ReactNativeBridgeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeBridgeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3477F852035634200AD6A71 /* ReactNativeBridgeDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeBridgeDemoUITests.swift; sourceTree = "<group>"; };
 		C3477F872035634200AD6A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3842515203565DA00F95BE6 /* ReactModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactModule.swift; sourceTree = "<group>"; };
 		E0F4B074B78E970389CFE3A4 /* Pods-ReactNativeBridgeDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBridgeDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeBridgeDemoUITests/Pods-ReactNativeBridgeDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC0D57FAC1AEA86D3659106D /* Pods_ReactNativeBridgeDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeBridgeDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			children = (
 				C3477F652035634100AD6A71 /* AppDelegate.swift */,
 				C3477F672035634100AD6A71 /* ViewController.swift */,
+				C3842515203565DA00F95BE6 /* ReactModule.swift */,
 				C3477F692035634100AD6A71 /* Main.storyboard */,
 				C3477F6C2035634100AD6A71 /* Assets.xcassets */,
 				C3477F6E2035634100AD6A71 /* LaunchScreen.storyboard */,
@@ -459,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3477F682035634100AD6A71 /* ViewController.swift in Sources */,
+				C3842516203565DB00F95BE6 /* ReactModule.swift in Sources */,
 				C3477F662035634100AD6A71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
