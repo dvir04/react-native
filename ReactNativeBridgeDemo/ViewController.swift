@@ -21,11 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let currentState = UserDefaults.standard.bool(forKey: "State")
-        
-        nativeSwitch.setOn(currentState, animated: false)
-        
-        reactView = ReactModule.sharedInstance.viewForModule("StateApp", initialProperties: ["state": currentState])
+        reactView = ReactModule.sharedInstance.viewForModule("StateApp", initialProperties: ["state": true])
         reactNativeView.addSubview(reactView!)
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.toggleState), name: .reactNativeStateChangedNotification, object: nil)
@@ -38,7 +34,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nativeSwitchValueChanged(_ sender: UISwitch) {
-        UserDefaults.standard.set(sender.isOn, forKey: "State")
         StateManager.broadcastStateChangedEvent(state: sender.isOn)
     }
     

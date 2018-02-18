@@ -12,12 +12,16 @@ import React
 class ReactModule: NSObject {
     static let sharedInstance = ReactModule()
     
-    var bridge: RCTBridge?
+    var bridge: RCTBridge!
+    
+    override init() {
+        super.init()
+        
+        bridge = RCTBridge.init(delegate: self, launchOptions: nil)
+    }
     
     func viewForModule(_ moduleName: String, initialProperties: [String : Any]?) -> RCTRootView {
-        let viewBridge = createBridgeIfNeeded()
-        let rootView: RCTRootView = RCTRootView(bridge: viewBridge, moduleName: moduleName, initialProperties: initialProperties)
-        return rootView
+        return RCTRootView(bridge: bridge, moduleName: moduleName, initialProperties: initialProperties)
     }
     
     func eventEmitter(forName moduleName: String) -> RCTEventEmitter? {
@@ -33,15 +37,7 @@ extension ReactModule: RCTBridgeDelegate {
 
 private extension ReactModule {
     
-    func createBridgeIfNeeded() -> RCTBridge {
-        if bridge == nil {
-            bridge = RCTBridge.init(delegate: self, launchOptions: nil)
-        }
-        return bridge!
-    }
-    
     func module(forName moduleName: String) -> Any {
-        let bridge = createBridgeIfNeeded()
         return bridge.module(forName: moduleName)
     }
 }
